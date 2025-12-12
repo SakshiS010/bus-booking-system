@@ -1,0 +1,75 @@
+.bus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.bus-card {
+  background-color: var(--bg-primary);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bus-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.bus-card-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bus-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.seats-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.seats-badge.full {
+  background-color: var(--danger-color);
+}
+
+.bus-card-body {
+  padding: 1.5rem;
+}
+
+.bus-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.bus-info .label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.bus-info .value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.bus-card-footer {
+  padding: 0 1.5rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .bus-grid {
+    grid-template-columns: 1fr;
+  }
+}

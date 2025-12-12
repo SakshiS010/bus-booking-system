@@ -1,0 +1,77 @@
+.admin-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.create-bus-section, .bus-list-section {
+  background-color: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+}
+
+.create-bus-section h2, .bus-list-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.bus-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.bus-table {
+  overflow-x: auto;
+}
+
+.bus-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bus-table th {
+  background-color: var(--bg-secondary);
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.bus-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.bus-table tbody tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+.empty-text {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .admin-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-bus-section, .bus-list-section {
+    padding: 1rem;
+  }
+
+  .bus-table {
+    font-size: 0.875rem;
+  }
+
+  .bus-table th, .bus-table td {
+    padding: 0.5rem;
+  }
+}
